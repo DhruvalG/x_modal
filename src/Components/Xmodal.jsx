@@ -105,7 +105,7 @@ let Xmodal = ({ setOpenModal, setOpenModalBackground }) => {
                             required
                         />
                         <div>
-                            <button type="submit" className={styles.submit}>
+                            <button type="submit" className="submit">
                                 Submit
                             </button>
                         </div>
