@@ -5,7 +5,7 @@ import Xmodal from "./Components/Xmodal";
 function App() {
     let [openModal, setOpenModal] = useState(false);
     let [openModalBackground, setOpenModalBackground] = useState(false);
-    let modalBackground = {
+    let modal = {
         height: "100vh",
         backdropFilter: openModalBackground ? "blur(1px)" : "none",
         transition: "backdrop-filter 0.3s ease",
@@ -15,7 +15,7 @@ function App() {
     };
 
     return (
-        <div style={modalBackground}>
+        <div style={modal}>
             <h1>User Details Modal</h1>
             <button
                 className="modalTrigger"
