@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.modalTrigger {
+  height: 40px;
+  width: 118px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007aff;
+  color: white;
+  font-size: 15px;
+}
