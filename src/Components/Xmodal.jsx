@@ -38,77 +38,81 @@ let Xmodal = ({ setOpenModal, setOpenModalBackground }) => {
     };
 
     return (
-        <div
-            className={styles.modalBackground}
-            onClick={() => {
-                setOpenModal(false);
-                setOpenModalBackground(false);
-                setFormData((prevData) => ({
-                    ...prevData,
-                    username: "",
-                    email: "",
-                    phone: "",
-                    dob: "",
-                }));
-            }}
-        >
-            <div
-                className={styles.modalContainer}
-                onClick={(e) => {
-                    e.stopPropagation();
-                }}
-            >
-                <div className={styles.modalHeader}>
-                    <h1>Fill Details</h1>
-                </div>
-                <div className={styles.modalBody}>
-                    <form onSubmit={validationChecks}>
-                        <label htmlFor="username">
-                            <h3>Username:</h3>
-                        </label>
-                        <input
-                            type="text"
-                            id="username"
-                            value={formData.username}
-                            onChange={handleFormDataChange}
-                            required
-                        />
-                        <label htmlFor="email">
-                            <h3>Email Address:</h3>
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={formData.email}
-                            onChange={handleFormDataChange}
-                            required
-                        />
-                        <label htmlFor="phone">
-                            <h3>Phone Number:</h3>
-                        </label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            value={formData.phone}
-                            onChange={handleFormDataChange}
-                            required
-                        />
-                        <label htmlFor="dob">
-                            <h3>Date of Birth:</h3>
-                        </label>
-                        <input
-                            type="date"
-                            id="dob"
-                            value={formData.dob}
-                            onChange={handleFormDataChange}
-                            required
-                        />
-                        <div>
-                            <button type="submit" className={styles.submit}>
-                                Submit
-                            </button>
+        <div className="modal">
+            <div className="modal-content">
+                <div
+                    className={styles.modalBackground}
+                    onClick={() => {
+                        setOpenModal(false);
+                        setOpenModalBackground(false);
+                        setFormData((prevData) => ({
+                            ...prevData,
+                            username: "",
+                            email: "",
+                            phone: "",
+                            dob: "",
+                        }));
+                    }}
+                >
+                    <div
+                        className={styles.modalContainer}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                        }}
+                    >
+                        <div className={styles.modalHeader}>
+                            <h1>Fill Details</h1>
                         </div>
-                    </form>
+                        <div className={styles.modalBody}>
+                            <form onSubmit={validationChecks}>
+                                <label htmlFor="username">
+                                    <h3>Username:</h3>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    value={formData.username}
+                                    onChange={handleFormDataChange}
+                                    required
+                                />
+                                <label htmlFor="email">
+                                    <h3>Email Address:</h3>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    value={formData.email}
+                                    onChange={handleFormDataChange}
+                                    required
+                                />
+                                <label htmlFor="phone">
+                                    <h3>Phone Number:</h3>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    value={formData.phone}
+                                    onChange={handleFormDataChange}
+                                    required
+                                />
+                                <label htmlFor="dob">
+                                    <h3>Date of Birth:</h3>
+                                </label>
+                                <input
+                                    type="date"
+                                    id="dob"
+                                    value={formData.dob}
+                                    onChange={handleFormDataChange}
+                                    required
+                                />
+                                <div>
+                                    <button type="submit" className={styles.submit}>
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
